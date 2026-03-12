@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nome da sua loja e icone aqui</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!--<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon"> -->
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="topo">
+
+
+            <img src="assets/logo.png" alt="sua logo aqui" class="logo">
+            <h1>Nome da sua loja aqui</h1>
+            <div class="redes">
+
+                <a href="https://instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://facebook.com/" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="https://wa.me/5599999999999" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+        </div>
+    </header>
+    <br>
+
+    <nav class="categorias">
+
+        <button onclick="filtrarCategoria('todos')">Todos</button>
+        <button onclick="filtrarCategoria('fabricacao-propria')">Fabricação Própria</button>
+        <button onclick="filtrarCategoria('suplementos')">Suplementos</button>
+        <button onclick="filtrarCategoria('chas')">Chás</button>
+        <button onclick="filtrarCategoria('temperos')">Temperos</button>
+    </nav>
+    <br>
+    <div class="pesquisa">
+        <input type="text" id="barraPesquisa" placeholder="Pesquisar produto..." onkeyup="pesquisarProduto()">
+    </div>
+    <br>
+
+    <section id="produtos" class="produtos"></section>
+
+
+    <a href="https://wa.me/5599999999999?text=Olá! Gostaria de saber mais sobre os produtos." target="_blank"
+        class="whatsapp-float" onclick="fbq('track','Contact'); return true;">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/whatsapp-1868967-1583131.png" alt="WhatsApp">
+    </a>
+
+
+    <footer>
+
+        <div class="rodape">
+
+            <div>
+
+                <!--<iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.034917803973!2d-51.16340032535215!3d-23.314491852567706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb435f16ff0663%3A0xa6e96618b6e11fec!2sR.%20Par%C3%A1%2C%20971%20-%20Centro%2C%20Londrina%20-%20PR%2C%2086010-450!5e0!3m2!1spt-BR!2sbr!4v1773327871567!5m2!1spt-BR!2sbr"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                <iframe src="https://maps.google.com/maps?q=londrina&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+
+            <div>
+                <h3>Contato</h3>
+                <!--<p>Telefone: (43) 98800-5777 <br> Email:
+                </p>-->
+                <p>seu contato aqui</p>
+
+            </div>
+
+            <div>
+                <h4>Endereço</h4>
+                <!--<p>Rua Pará, 959 - Loja 2 <br>
+                    Centro, Londrina - PR <br>
+                    CEP: 86010-450
+                </p>-->
+                <p>seu endereço aqui</p>
+            </div>
+
+            <div>
+                <h4>Horário de Funcionamento</h4>
+               <!--<p>Seg-Sex 09h às 18h <br> Sábado 08h às 13h 
+                </p>-->
+                <p>seu horário de funcionamento aqui</p>
+            </div>
+
+            <div>
+                <h4>Formas de Pagamento</h4>
+                <!--<p>Cartão de Crédito e Débito
+                    <br>
+                    Pix
+                    <br>
+                    Dinheiro
+                </p>-->
+                <p>seus metodos de pagamento aqui</p>
+            </div>
+
+            <div>
+                <h4>Fazemos Entregas</h4>
+               <!-- <p>Consultar Disponibilidade</p>-->
+                <p>seu texto sobre entregas aqui</p>
+            </div>
+
+            <div class="politicas">
+
+                <h4>Políticas</h4>
+                <p>seu texto sobre políticas aqui</p>
+<!--
+                <button onclick="mostrarPolitica('privacidade')">Política de Privacidade</button>
+                <div id="privacidade" class="texto-politica">
+                    Seus dados são utilizados apenas para atendimento e envio de informações sobre os produtos da loja.
+                    Não compartilhamos dados com terceiros.
+                </div>
+
+                <button onclick="mostrarPolitica('termos')">Termos de Uso</button>
+                <div id="termos" class="texto-politica">
+                    As informações deste site têm caráter informativo. Os produtos naturais não substituem orientação
+                    médica.
+                </div>
+
+                <button onclick="mostrarPolitica('troca')">Troca e Devolução</button>
+                <div id="troca" class="texto-politica">
+                    Trocas podem ser solicitadas em até 7 dias após o recebimento do produto, desde que esteja lacrado e
+                    em perfeitas condições.
+                </div>
+
+                <button onclick="mostrarPolitica('entrega')">Política de Entrega</button>
+                <div id="entrega" class="texto-politica">
+                    As entregas são realizadas na cidade e região conforme disponibilidade.
+                </div>
+
+            </div>
+        
+        </div>-->
+        <p class="copy">© Todos os direitos reservados</p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="produtos.js"></script>
+    <script>
+
+        function mostrarPolitica(id) {
+
+            const texto = document.getElementById(id);
+
+            if (texto.style.display === "block") {
+                texto.style.display = "none";
+            } else {
+                texto.style.display = "block";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
