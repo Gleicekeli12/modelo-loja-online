@@ -123,6 +123,9 @@ footer {
 
 p {
     font-size: 12px;
+    white-space: pre-line;
+    line-height: 1.6;
+
 }
 
 .rodape {
@@ -157,10 +160,18 @@ p {
 
 .texto-politica {
     display: none;
+    max-width: 400px; /* ou 100% se quiser responsivo */
     font-size: 12px;
+    margin-top: 10px;
     margin-bottom: 10px;
     background: rgba(255,255,255,0.1);
     padding: 10px;
+    line-height: 1.5;
+
+    /* quebra automática de texto */
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* mapa */
