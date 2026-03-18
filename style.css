@@ -4,6 +4,8 @@ body {
     background: white;
 }
 
+/* HEADER */
+
 header {
     background: #352d55;
     color: white;
@@ -14,35 +16,38 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+    flex-wrap: wrap;
 }
 
 .logo {
-    height: 80px;
+    height: 70px;
 }
 
 h1 {
-    font-size: 30px;
-    margin: 10px 10px;
+    font-size: 28px;
+    margin: 10px;
     text-align: center;
+    flex: 1;
+}
+
+.redes {
+    display: flex;
+    align-items: center;
 }
 
 .redes i {
-    font-size: 35px;
-    margin-left: 15px;
+    font-size: 28px;
+    margin-left: 10px;
     color: white;
 }
 
-.redes a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
-}
+/* PESQUISA */
 
 .pesquisa input {
-    width: 80%;
+    width: 90%;
     max-width: 400px;
-    padding: 12px 20px;
-    font-size: 18px;
+    padding: 10px;
+    font-size: 16px;
     border-radius: 5px;
     border: 1px solid #352d55;
     box-shadow: 0 2px 6px #352d55;
@@ -50,99 +55,82 @@ h1 {
     display: block;
 }
 
+/* CATEGORIAS */
+
 .categorias {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     background: #52476b;
     padding: 10px;
+    flex-wrap: wrap;
 }
 
 .categorias button {
     background: none;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
 }
+
+/* PRODUTOS */
 
 .produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
-    gap: 20px;
-    justify-content: center;
-    padding: 40px;
+    gap: 15px;
+    padding: 15px;
 }
 
 .card {
     text-align: center;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 .card img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 120px;
     object-fit: contain;
 }
 
-.card {
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-}
-
 .card h4 {
-    text-decoration: none;
-    color: black;
+    font-size: 16px;
 }
 
-.card:visited {
-    color: black;
-}
+/* WHATSAPP FLOAT */
 
 .whatsapp-float {
     position: fixed;
-    width: 60px;
-    height: 60px;
     bottom: 20px;
     right: 20px;
     z-index: 100;
 }
 
-.whatsapp-float img {
-    width: 100%;
-    height: 100%;
-}
+/* FOOTER */
 
 footer {
     background: #352d55;
     color: white;
-    padding: 10px;
-}
-
-p {
-    font-size: 12px;
-    white-space: pre-line;
-    line-height: 1.6;
-
+    padding: 20px;
 }
 
 .rodape {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     max-width: 1200px;
     margin: auto;
-    gap: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-/* cada coluna do footer */
-.rodape > div {
-    width: 400px;
+.rodape>div {
+    flex: 1;
+    min-width: 250px;
 }
 
-/* botões das políticas */
+/* POLÍTICAS */
 
 .politicas button {
     width: 100%;
@@ -156,25 +144,16 @@ p {
     font-size: 12px;
 }
 
-/* texto das políticas */
-
 .texto-politica {
     display: none;
-    max-width: 400px; /* ou 100% se quiser responsivo */
     font-size: 12px;
     margin-top: 10px;
-    margin-bottom: 10px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 10px;
     line-height: 1.5;
-
-    /* quebra automática de texto */
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
 }
 
-/* mapa */
+/* MAPA */
 
 iframe {
     width: 100%;
@@ -186,45 +165,35 @@ iframe {
 .copy {
     text-align: center;
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 14px;
     color: #ccc;
 }
 
+/* 📱 MOBILE - 3 colunas */
 @media (max-width: 768px) {
+    .produtos {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-.topo{
-flex-direction: column;
-gap:10px;
+    .card img {
+        height: 100px;
+    }
+
+    .card h4 {
+        font-size: 12px;
+    }
 }
 
-.categorias{
-flex-wrap: wrap;
-gap:10px;
+/* 📱 TABLET - 4 colunas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .produtos {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-.categorias button{
-font-size:14px;
-}
-
-.rodape{
-flex-direction: column;
-gap:20px;
-text-align:center;
-}
-
-iframe{
-width:100%;
-}
-
-.produto-container{
-flex-direction: column;
-padding:20px;
-text-align:center;
-}
-
-.produto-container img{
-width:100%;
-max-width:300px;
-}
-
+/* 💻 DESKTOP - 5 colunas */
+@media (min-width: 1025px) {
+    .produtos {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }

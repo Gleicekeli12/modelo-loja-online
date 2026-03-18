@@ -112,4 +112,12 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .topo h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .logo {
+        height: 60px;
+    }
+
 }
